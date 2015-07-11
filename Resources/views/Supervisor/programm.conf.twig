@@ -1,0 +1,15 @@
+[program:{{ name }}]
+command={% block cmd %}php console {{ command }} --env=prod --verbose{% endblock cmd %}
+
+process_name=%(program_name)s%(process_num)02d
+numprocs={{ numprocs|default('1') }}
+autostart=true
+autorestart=true
+startsec=5
+startretries=10
+stdout_logfile=supervisor/{{ name }}.out.log
+stdout_capture_maxbytes=1MB
+stderr_logfile=supervisor/{{ name }}.error.log
+stderr_capture_maxbytes=1MB
+{% block options %}
+{% endblock options %}

@@ -1,0 +1,8 @@
+services:
+    supervisor.service:
+        class: Supervisord\SupervisorBundle\Services\Supervisor
+        arguments:
+            - @templating
+            - %kernel.root_dir%
+            - %supervisord_supervisor.name%
+            - @twig
