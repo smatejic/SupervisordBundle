@@ -4,7 +4,7 @@
     "keywords":     ["supervisor","supervisord"],
     "homepage":     "https://github.com/smatejic/SupervisordBundle",
     "type":         "symfony-bundle",
-    "license":      "Apache2",
+    "license":      "MIT",
     "authors": [
         {
             "name":   "Sasha Matejic",
